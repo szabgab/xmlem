@@ -1,5 +1,8 @@
 ## Unreleased
 
+## 0.5.0
+
+- \[BREAKING] Update dependencies.
 - Pretty-printing now keeps an element's text content on the same line as its
   tags when it fits within `max_line_length`, instead of always breaking it onto
   its own line. Child elements still nest onto their own lines ([#14]).
@@ -16,7 +19,7 @@
 
 ## 0.4.0 (yanked)
 
-- [BREAKING] Update dependencies.
+- \[BREAKING] Update dependencies.
 
 ## 0.3.3
 
@@ -36,12 +39,12 @@
 
 ## 0.3.0
 
-- [BREAKING] Revert `Element::name` to previous behavior of including prefix
+- \[BREAKING] Revert `Element::name` to previous behavior of including prefix
   ([#6]).
-- [BREAKING] Wrap returned errors in a new `ReadError` for reading functions
+- \[BREAKING] Wrap returned errors in a new `ReadError` for reading functions
   ([#7]).
-- [BREAKING] Update dependencies ([#7]).
-- [BREAKING] Future-proof `display::Config` to allow adding new options in
+- \[BREAKING] Update dependencies ([#7]).
+- \[BREAKING] Future-proof `display::Config` to allow adding new options in
   compatible versions.
 - Improve pretty formatting and avoid ever-increasing document size in
   read/write loops ([#5], [#8]).
