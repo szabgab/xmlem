@@ -497,6 +497,19 @@ mod tests {
     }
 
     #[test]
+    fn custom_indent() {
+        use crate::display::Config;
+        let doc =
+            Document::from_str("<outer><inner>short</inner><inner>also short</inner></outer>")
+                .unwrap();
+        let cfg = Config::default_pretty().indent(4);
+        assert_eq!(
+            doc.to_string_pretty_with_config(&cfg),
+            "<outer>\n    <inner>short</inner>\n    <inner>also short</inner>\n</outer>\n"
+        );
+    }
+
+    #[test]
     fn non_pretty_preserves_whitespace() {
         const EXACT_XML: &str = "<text>\t  \n Actual \n \t Output   \t\n  </text>";
         let doc = Document::from_str(EXACT_XML).unwrap();
